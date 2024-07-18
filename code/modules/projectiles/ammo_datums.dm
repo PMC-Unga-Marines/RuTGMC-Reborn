@@ -1469,7 +1469,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	hud_state_empty = "rifle_empty"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING|AMMO_SENTRY
 	accurate_range = 10
-	damage = 25
+	damage = 20
 	penetration = 20
 	damage_falloff = 0.25
 
@@ -1483,10 +1483,41 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 
 /datum/ammo/bullet/turret/mini
 	name = "small caliber autocannon bullet"
-	damage = 20
-	penetration = 20
+	damage = 12
+	penetration = 10
+	damage_falloff = 0.5
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SENTRY
 
+
+/datum/ammo/bullet/turret/sniper
+	name = "antimaterial bullet"
+	bullet_color = COLOR_SOFT_RED
+	accurate_range = 14
+	damage = 75
+	penetration = 50
+	damage_falloff = 0
+
+/datum/ammo/bullet/turret/buckshot
+	name = "turret buckshot shell"
+	icon_state = "buckshot"
+	hud_state = "shotgun_buckshot"
+	bonus_projectiles_type = /datum/ammo/bullet/turret/spread
+	bonus_projectiles_amount = 6
+	bonus_projectiles_scatter = 5
+	max_range = 10
+	damage = 20
+	penetration = 20
+	damage_falloff = 1
+
+/datum/ammo/bullet/turret/buckshot/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, knockback = 1, max_range = 4)
+
+/datum/ammo/bullet/turret/spread
+	name = "additional buckshot"
+	max_range = 10
+	damage = 20
+	penetration = 40
+	damage_falloff = 1
 
 /datum/ammo/bullet/machinegun //Adding this for the MG Nests (~Art)
 	name = "machinegun bullet"
@@ -4335,6 +4366,10 @@ RU TGMC EDIT*/
 	burntime = 40
 	burnlevel = 46
 	bullet_color = COLOR_NAVY
+
+/datum/ammo/flamethrower/turret
+	max_range = 8
+	damage = 50
 
 /datum/ammo/water
 	name = "water"
