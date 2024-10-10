@@ -155,7 +155,6 @@
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/foldable/bipod,
@@ -259,7 +258,6 @@
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/foldable/bipod,
@@ -441,7 +439,6 @@
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/bayonetknife/som,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/marine,
@@ -550,7 +547,6 @@
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/bayonetknife/som,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/lace,
@@ -577,7 +573,7 @@
 	)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol/tactical
-	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/reddot)
 
 /datum/lasrifle/energy_pistol_mode/standard
 	rounds_per_shot = 20
@@ -635,7 +631,6 @@
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/bayonetknife/som,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/weapon/gun/grenade_launcher/underslung,
@@ -1001,7 +996,6 @@
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/bayonetknife/som,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
@@ -1156,7 +1150,6 @@
 	rounds_per_shot = 32
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
@@ -1180,7 +1173,7 @@
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/gyro)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/charger/standard
-	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/reddot)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/charger/scout
 	starting_attachment_types = list(/obj/item/attachable/motiondetector, /obj/item/attachable/gyro)
@@ -1208,7 +1201,6 @@
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope,
@@ -1229,13 +1221,13 @@
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/caliver/somvet
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/caliver/tacsensor
-	starting_attachment_types = list(/obj/item/attachable/motiondetector, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/motiondetector)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/caliver/standard
-	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/reddot)
 
 /obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/culverin
 	name = "\improper VX-42 Culverin"
