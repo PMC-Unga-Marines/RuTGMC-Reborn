@@ -12,14 +12,14 @@
 	accuracy = 40
 	accurate_range = 20
 	max_range = 14
-	damage = 200
+	damage = 0 //explosion do damage
 	penetration = 100
 	sundering = 100
 	bullet_color = LIGHT_COLOR_FIRE
 	barricade_clear_distance = 2
 
 /datum/ammo/rocket/drop_nade(turf/T)
-	cell_explosion(T, 200, 35)
+	cell_explosion(T, 400, 70)
 
 /datum/ammo/rocket/on_hit_mob(mob/M, obj/projectile/P)
 	drop_nade(get_turf(M))
@@ -39,19 +39,17 @@
 	hud_state = "rocket_he"
 	accurate_range = 20
 	max_range = 14
-	damage = 150
 	penetration = 100
 	sundering = 100
 
 /datum/ammo/rocket/he/drop_nade(turf/T)
-	cell_explosion(T, 150, 40)
+	cell_explosion(T, 300, 80)
 
 /datum/ammo/rocket/he/unguided
-	damage = 100
 	flags_ammo_behavior = AMMO_SNIPER // We want this one to specifically go over onscreen range.
 
 /datum/ammo/rocket/he/unguided/drop_nade(turf/T)
-	cell_explosion(T, 200, 50)
+	cell_explosion(T, 300, 75)
 
 /datum/ammo/rocket/ap
 	name = "kinetic penetrator"
@@ -72,11 +70,10 @@
 	accurate_range = 15
 	max_range = 40
 	penetration = 50
-	damage = 200
 	hud_state = "bigshell_he"
 
 /datum/ammo/rocket/ltb/drop_nade(turf/T)
-	cell_explosion(T, 200, 45)
+	cell_explosion(T, 400, 90)
 
 /datum/ammo/bullet/tank_apfds
 	name = "8.8cm APFDS round"
@@ -227,12 +224,11 @@
 	shell_speed = 2
 	accurate_range = 20
 	max_range = 30
-	damage = 100
 	penetration = 50
 	sundering = 50
 
 /datum/ammo/rocket/recoilless/drop_nade(turf/T)
-	cell_explosion(T, 150, 75)
+	cell_explosion(T, 250, 90)
 
 /datum/ammo/rocket/recoilless/heat
 	name = "HEAT shell"
@@ -266,12 +262,11 @@
 	flags_ammo_behavior = AMMO_SNIPER //We want this to specifically go farther than onscreen range.
 	accurate_range = 15
 	max_range = 20
-	damage = 75
 	penetration = 50
 	sundering = 25
 
 /datum/ammo/rocket/recoilless/light/drop_nade(turf/T)
-	cell_explosion(T, 75, 25)
+	cell_explosion(T, 150, 50)
 
 /datum/ammo/rocket/recoilless/chemical
 	name = "low velocity chemical shell"
@@ -314,22 +309,20 @@
 	flags_ammo_behavior = AMMO_SNIPER //We want this to specifically go farther than onscreen range.
 	accurate_range = 15
 	max_range = 20
-	damage = 75
 	penetration = 15
 	sundering = 25
 
 /datum/ammo/rocket/recoilless/low_impact/drop_nade(turf/T)
-	cell_explosion(T, 100, 15)
+	cell_explosion(T, 175, 25)
 
 /datum/ammo/rocket/oneuse
 	name = "explosive rocket"
-	damage = 100
 	penetration = 100
 	sundering = 100
 	max_range = 30
 
 /datum/ammo/rocket/oneuse/drop_nade(turf/T)
-	cell_explosion(T, 115, 45)
+	cell_explosion(T, 225, 80)
 
 /datum/ammo/rocket/som
 	name = "high explosive RPG"
@@ -338,12 +331,11 @@
 	flags_ammo_behavior = AMMO_SNIPER
 	accurate_range = 15
 	max_range = 20
-	damage = 80
 	penetration = 20
 	sundering = 20
 
 /datum/ammo/rocket/som/drop_nade(turf/T)
-	cell_explosion(T, 175, 35)
+	cell_explosion(T, 255, 45)
 
 /datum/ammo/rocket/som/light
 	name = "low impact RPG"
@@ -351,11 +343,10 @@
 	hud_state = "rpg_le"
 	flags_ammo_behavior = AMMO_SNIPER
 	accurate_range = 15
-	damage = 60
 	penetration = 10
 
 /datum/ammo/rocket/som/light/drop_nade(turf/T)
-	cell_explosion(T, 125, 15)
+	cell_explosion(T, 185, 20)
 
 /datum/ammo/rocket/som/thermobaric
 	name = "thermobaric RPG"
@@ -427,14 +418,13 @@
 	hud_state_empty = "shell_empty"
 	flags_ammo_behavior = AMMO_TARGET_TURF|AMMO_SNIPER|AMMO_PASS_THROUGH_TURF
 	shell_speed = 2
-	damage = 90
 	penetration = 30
 	sundering = 25
 	max_range = 30
 	handful_amount = 1
 
 /datum/ammo/rocket/atgun_shell/drop_nade(turf/T)
-	cell_explosion(T, 55 , 30)
+	cell_explosion(T, 145 , 80)
 
 /datum/ammo/rocket/atgun_shell/on_hit_turf(turf/T, obj/projectile/P) //no explosion every time it hits a turf
 	P.proj_max_range -= 10
@@ -466,12 +456,11 @@
 	name = "low velocity high explosive shell"
 	hud_state = "shell_he"
 	flags_ammo_behavior = AMMO_TARGET_TURF|AMMO_SNIPER
-	damage = 50
 	penetration = 50
 	sundering = 35
 
 /datum/ammo/rocket/atgun_shell/he/drop_nade(turf/T)
-	cell_explosion(T, 90, 30)
+	cell_explosion(T, 140, 50)
 
 /datum/ammo/rocket/atgun_shell/he/on_hit_turf(turf/T, obj/projectile/P)
 	drop_nade(T.density ? P.loc : T)
